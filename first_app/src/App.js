@@ -1,6 +1,10 @@
-function App() {
+  import First from "./First";
+  function App() {
   return (
-    <h1>Hello</h1>
+    <>
+    <h1>Hello</h1>,
+    <First / >
+    </>
   );
 }
 
