@@ -8,9 +8,16 @@ function App() {
 
   let [counter,setcounter] =useState(15)
   // let counter=5
-  const addValue =()=>{
-   counter=counter+1
-   setcounter(counter)
+  // const addValue =()=>{
+  //  counter=counter+1
+  //  setcounter(counter)
+  //  setcounter(counter)
+  //  setcounter(counter)
+  // }
+  const addValue=()=>{
+    setcounter((prevState)=>prevState+1)
+    setcounter((prevState)=>prevState+1)
+    setcounter((prevState)=>prevState+1)
   }
   const removeValue=()=>{
     counter=counter-1;
