@@ -16,8 +16,8 @@ function App() {
   // }
   const addValue=()=>{
     setcounter((prevState)=>prevState+1)
-    setcounter((prevState)=>prevState+1)
-    setcounter((prevState)=>prevState+1)
+    // setcounter((prevState)=>prevState+1)
+    // setcounter((prevState)=>prevState+1)
   }
   const removeValue=()=>{
     counter=counter-1;
