@@ -1,9 +1,16 @@
-import { useState,useCallback ,useEffect} from 'react'
+import { useState,useCallback ,useEffect , useRef} from 'react'
 function App() {
   const[length,setLength]=useState(8);
   const[numallowed,setNumallowed]=useState(false);
   const[charallowed,setCharallowed]=useState(false);
   const [password,setPassword]=useState()
+
+  const passwordRef =useRef(null)
+
+  const copypaste=useCallback(()=>{
+    passwordRef.current?.select(password)
+      window.navigator.clipboard.writeText(password)
+  },[password])
 
  const passwordgen=useCallback(()=>{
     let pass=""
@@ -31,12 +38,13 @@ function App() {
       <div className='flex shadow rounded-lg overflow-hidden m-5'>
         <input 
         type="text"
+        ref={passwordRef}
         value={password}
         className='outline-none w-full py-1 px-3'
         placeholder='password'
         readOnly
         />
-        <button className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'>Copy</button>
+        <button onClick={copypaste} className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0 '>Copy</button>
       </div>
 
       <div className='flex text-sm gap-x-2'>
