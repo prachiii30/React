@@ -19,7 +19,7 @@ function App() {
             <button onClick={()=>{changecolor('red')}}  className="flex felx-wrap justify-center py-2 px-4 rounded gap-3 shadow-xl bg-red-500">Red</button>
           </li>
           <li>
-            <button onClick={()=>{changecolor('blue')}} className="bg-blue-500 flex felx-wrap justify-center py-2 px-4 rounded gap-3 shadow-xl">Blue</button>
+            <button onClick={()=>setColor('blue')} className="bg-blue-500 flex felx-wrap justify-center py-2 px-4 rounded gap-3 shadow-xl">Blue</button>
           </li>
           <li>
             <button onClick={()=>{changecolor('green')}} className="bg-green-500 flex felx-wrap justify-center py-2 px-4 rounded gap-3 shadow-xl">Green</button>

@@ -7,10 +7,10 @@ function App() {
 
   const passwordRef =useRef(null)
 
-  const copypaste=useCallback(()=>{
+  const copypaste=()=>{
     passwordRef.current?.select(password)
       window.navigator.clipboard.writeText(password)
-  },[password])
+  }
 
  const passwordgen=useCallback(()=>{
     let pass=""
